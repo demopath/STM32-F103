@@ -12,7 +12,7 @@ on:
         description: '请输入原名称（默认使用仓库名）'
         required: true
         type: string
-        default: stm32f103_template
+        default: STM32-F103
         
 jobs:
   modify-files:
