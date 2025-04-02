@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "ARM",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/${workspaceFolderBasename}.elf",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:GCC_PATH}/arm-none-eabi-gdb.exe",
+            "miDebuggerServerAddress": "localhost:3333",
+            "preLaunchTask": "start openocd",
+            "postDebugTask": "stop openocd"
+        },
+        
+    ]
+}
