@@ -60,7 +60,7 @@
                 "-f",
                 "openocd.cfg",
                 "-c",
-                "program build/STM32-F103.elf",
+                "program build/stm32f103test.elf",
                 "verify",
                 "reset",
                 "exit"

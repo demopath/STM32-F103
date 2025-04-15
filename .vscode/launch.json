@@ -4,7 +4,7 @@
             "name": "ARM",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/STM32-F103.elf",
+            "program": "${workspaceFolder}/build/stm32f103test.elf",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
