@@ -4,7 +4,7 @@
             "name": "ARM",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/STM32-F03-NEW.elf",
+            "program": "${workspaceFolder}/build/STM32-F103.elf",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
