@@ -28,7 +28,7 @@ jobs:
         
       - name: Rename
         run: |
-          sed -i "s|$OLD|$NEW|g" Makefile "$OLD.ioc"
+          sed -i "s|$OLD|$NEW|g" Makefile "$OLD.ioc" .vscode/launch.json .vscode/tasks.json
           mv "$OLD.ioc" "$NEW.ioc"
 
       - uses: demopath/gitacp@v1

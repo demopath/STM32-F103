@@ -28,17 +28,28 @@
                 "showReuseMessage": false,
             },
         },
-        {   // 关闭 openocd 调试
+        {   // 关闭 openocd
             "label": "stop openocd",
             "type": "shell",
-            "command": "taskkill /F /IM openocd.exe",
+            "windows": {
+                "command": "taskkill",
+                "args": [
+                    "/F",
+                    "/IM",
+                    "openocd.exe"
+                ]
+            },
+            "linux": {
+                "command": "killall",
+                "args": [
+                    "-9",
+                    "openocd"
+                ]
+            },
             "group": "test",
             "presentation": {
-                "clear": true,
                 "showReuseMessage": false,
-                "close": true,
-                "reveal": "never"
-            },
+            }
         },
         {   // 烧录程序
             "label": "flash",
@@ -49,7 +60,10 @@
                 "-f",
                 "openocd.cfg",
                 "-c",
-                "program build/${workspaceFolderBasename}.elf verify reset exit"
+                "program build/STM32-F03-NEW.elf",
+                "verify",
+                "reset",
+                "exit"
             ],
             "group": "build",
             "dependsOn": ["make"],
@@ -62,6 +76,7 @@
             "label": "make",
             "type": "shell",
             "command": "make",
+            "group": "build",
             "args": [
                 "-s",
                 "-C",
@@ -69,7 +84,6 @@
             ],
             "problemMatcher": "$gcc",
             "presentation": {
-                "clear": true,
                 "showReuseMessage": false,
             },
         }
