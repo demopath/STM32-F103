@@ -5,7 +5,7 @@ on:
     inputs:
       new_name:
         description: '请输入新名称（默认使用仓库名）'
-        required: false
+        required: true
         type: string
 
       old_name:
@@ -20,20 +20,15 @@ jobs:
     permissions:
       contents: write
     env:
-      OLD: ${{ inputs.old_name || github.event.repository.name }}
-      NEW: ${{ inputs.new_name || github.event.repository.name }}
+      OLD: ${{ inputs.old_name }}
+      NEW: ${{ inputs.new_name }}
+
     steps:
-
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Checkout repository
-        uses: demopath/gitsave@main
+      - uses: actions/checkout@v3
         
       - name: Rename
         run: |
-          sed -i "s|$OLD|$NEW|g" Makefile
-          sed -i "s|$OLD|$NEW|g" "$OLD.ioc"
+          sed -i "s|$OLD|$NEW|g" Makefile "$OLD.ioc"
           mv "$OLD.ioc" "$NEW.ioc"
 
       - uses: demopath/gitacp@v1
