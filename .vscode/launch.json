@@ -13,8 +13,7 @@
             "MIMode": "gdb",
             "miDebuggerPath": "arm-none-eabi-gdb",
             "miDebuggerServerAddress": "localhost:3333",
-            "preLaunchTask": "start openocd",
-            "postDebugTask": "stop openocd",
+            "preLaunchTask": "debug",
             "svdPath": "${workspaceFolder}/STM32F103.svd",
         },
     ]
