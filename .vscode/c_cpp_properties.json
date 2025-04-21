@@ -14,7 +14,8 @@
                 "USE_HAL_DRIVER",
                 "STM32F103xB"
             ],
-            "compilerPath": "${env:GCC_PATH}/arm-none-eabi-gcc.exe",
+            "compilerPath": "/opt/gcc-arm-none-eabi/bin/arm-none-eabi-gcc",
+            // "compilerPath": "${env:GCC_PATH}/arm-none-eabi-gcc.exe",
             "cStandard": "c11",
             "cppStandard": "c++14",
             "intelliSenseMode": "gcc-arm"
