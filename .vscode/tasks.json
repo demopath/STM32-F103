@@ -47,9 +47,7 @@
             "args": [
                 "-d1",
                 "-f",
-                "flash.cfg",
-                "-c",
-                "program build/stm32f103test.elf verify reset exit"
+                "flash.cfg"
             ],
             "dependsOn": [
                 "编译"
