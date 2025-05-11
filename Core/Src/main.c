@@ -96,7 +96,6 @@ int main(void)
   {
     HAL_Delay(1000);                          // 
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);   // 切换PC13引脚状态（亮灭）
-   // Ubuntu 
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
